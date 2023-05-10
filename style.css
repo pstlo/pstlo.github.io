@@ -11,7 +11,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: #7203ad;
-	background-image: url("../Assets/Backgrounds/Stage1/Background.png");
+	background-image: url("Assets/Background.png");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
