@@ -47,20 +47,20 @@ function moveImage() {
 // Meteor shower animation
 function moveDiag(numIcons) {
   const images = [
-    'Assets/Obstacles/Meteors/bluem.png',
-    'Assets/Obstacles/Meteors/lightbm.png',
-    'Assets/Obstacles/Meteors/redm.png',
-    'Assets/Obstacles/Meteors/orangem.png',
-    'Assets/Obstacles/Meteors/whitem.png',
-	'Assets/Obstacles/Meteors/yellowm.png',
-	'Assets/Obstacles/Meteors/greenm.png',
-	'Assets/Obstacles/Meteors/dgreenm.png',
+    'Assets/bluem.png',
+    'Assets/lightbm.png',
+    'Assets/redm.png',
+    'Assets/orangem.png',
+    'Assets/whitem.png',
+	'Assets/yellowm.png',
+	'Assets/greenm.png',
+	'Assets/dgreenm.png',
   ];
 
 	function selectRandomImage() {
 		const randomNum = Math.random();
 		if (randomNum < 0.9) {
-			return 'Assets/Obstacles/Meteors/meteor.png';
+			return 'Assets/meteor.png';
 		}
 		else {
 			const index = Math.floor(Math.random() * (images.length - 1) + 1);
