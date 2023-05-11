@@ -189,6 +189,7 @@ td {
 
 #roadmap {
 	text-align:center;
+	font-family: 'Press Start 2P', sans-serif;
 }
 
 #roadmapList {
@@ -196,13 +197,17 @@ td {
 	padding-right:20%;
 	overflow-y:auto;
 }
+
 #roadmap li {
 	text-align:left;
 	font-family: 'Press Start 2P', sans-serif;
+	font-size: 15px;
 	margin-top: 50px;
 	color: white;
 	margin:10px;
 	max-width:auto;
+	padding-bottom: 3px;
+	padding-top: 3px;
 }
 
 #roadmap del {
