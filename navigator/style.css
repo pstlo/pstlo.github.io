@@ -123,6 +123,22 @@ td {
 	height:auto;
 }
 
+button {
+	width:300px;
+	font-family: 'Press Start 2P', sans-serif;
+	letter-spacing: 0px;
+	font-size:20px;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 10px;
+	color: white;
+}
+
+button:hover {
+	cursor: pointer;
+	filter: brightness(120%); !important;
+}
+
 #home {
 	display: flex;
 	flex-direction: column;
@@ -178,17 +194,29 @@ td {
 	text-align:center;
 }
 
+#contact{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	justify-content:center;
+}
+
 #socialButtons {
 	display:flex;
 	flex-direction:row;
 	padding: 1%;
 	position:relative;
+	max-width:500px;
+	overflow-x:auto;
 }
 
 #socialButton {
 	padding:0px;
+	margin-right:10px;
+	margin-left:10px;
 	height:40px;
-	width:40px;
+	width:auto;
 	position:relative;
 	background:none;
 	border:none;
@@ -197,14 +225,12 @@ td {
 
 #socialButton:hover {
 	background-color:white;
-	height:45px;
-	width:45px;
 }
 
-#socialButtonImage {
+#socialButton img {
 	position:relative;
 	height:100%;
-	width:100%;
+	max-width:auto%;
 }
 
 #feedback {
@@ -259,21 +285,6 @@ td {
 
 #changeLog td {text-align:left;}
 
-::-webkit-scrollbar {width: 5px;}
-
-::-webkit-scrollbar-thumb {
-  background-color: #06d10d;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {background-color: #65c968;}
-
-::-webkit-scrollbar-track {
-  background-color: #2f1970;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-corner {background-color: #79e091;}
 
 #changeLog::-webkit-scrollbar-thumb {
   background-color: #541df5;
@@ -294,65 +305,14 @@ td {
 	flex-direction:column;
 }
 
-#homeButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	text-decoration: none;
-	border-radius: 10px;
-	color: white;
-}
 
-button:hover {
-	cursor: pointer;
-	filter: brightness(120%); !important;
-}
-
-#donateButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	text-decoration: none;
-	background-color: blue;
-	color: white;
-	border-radius: 10px;
-}
-
-#roadmapButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	text-decoration: none;
-	background-color: #3699eb;
-	color: white;
-	border-radius: 10px;
-}
 
 #backButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 20px;
-	text-decoration: none;
-	background-color: #4CAF50;
-	color: white;
-	border-radius: 10px;
+	background-color:#2ED13E;
 }
 
-#greyBackButton {
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	text-decoration: none;
-	color: white;
+#feedback button {
 	background-color:#98a69c;
-	border-radius: 10px;
 	padding:0;
 	margin:0;
 	width:100px;
@@ -360,6 +320,21 @@ button:hover {
 	font-size: 15px;
 }
 
+::-webkit-scrollbar {width: 5px;}
+
+::-webkit-scrollbar-thumb {
+  background-color: #06d10d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {background-color: #65c968;}
+
+::-webkit-scrollbar-track {
+  background-color: #2f1970;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {background-color: #79e091;}
 video::-webkit-media-controls {
 	display:none;
 }
@@ -377,9 +352,6 @@ video::-webkit-media-controls-play-button {
 }
 
 @media only screen and (max-height: 500px) {
-	body{
-
-	}
 	#home {
 		font-size:80%;
 		max-width:100%;
@@ -389,26 +361,16 @@ video::-webkit-media-controls-play-button {
 		max-width: 90%;
 	}
 
-	#support {
-
-	}
-
 	#homeButtons {
 		flex-direction:row;
 		max-width: 80%;
 	}
 
-	#homeButton {
+	button {
 		width:120px;
 		height:50px;
 		font-size:8px;
 		padding: 5px;
-	}
-
-	#backButton {
-		width:200px;
-		font-size:20px;
-		padding: 10px;
 	}
 }
 
@@ -435,23 +397,12 @@ video::-webkit-media-controls-play-button {
 		font-size:15px;
 	}
 
-	#donateButton {
+	button {
 		width:100px;
 		font-size:8px;
 		padding: 10px;
 	}
 
-	#homeButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-	#backButton {
-		width:100px;
-		font-size:20px;
-		padding: 10px;
-	}
 }
 
 @media only screen and (max-width: 400px) {
@@ -462,6 +413,13 @@ video::-webkit-media-controls-play-button {
 	#homeButtons{
 		position:sticky;
 		overflow:auto;
+	}
+
+	button {
+		height:40px;
+		width:120px;
+		font-size:7px;
+		padding: 10px;
 	}
 
 	h1 {
@@ -488,25 +446,8 @@ video::-webkit-media-controls-play-button {
 		font-size:10px;
 	}
 
-	#donateButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
 
-	#homeButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
 
-	#backButton {
-		width:120px;
-		font-size:10px;
-		padding: 10px;
-	}
 }
 
 
