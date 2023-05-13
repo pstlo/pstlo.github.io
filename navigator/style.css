@@ -178,7 +178,36 @@ td {
 	text-align:center;
 }
 
-#contact {
+#socialButtons {
+	display:flex;
+	flex-direction:row;
+	padding: 1%;
+	position:relative;
+}
+
+#socialButton {
+	padding:0px;
+	height:40px;
+	width:40px;
+	position:relative;
+	background:none;
+	border:none;
+	border-radius:40px;
+}
+
+#socialButton:hover {
+	background-color:white;
+	height:45px;
+	width:45px;
+}
+
+#socialButtonImage {
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+#feedback {
 	background-color:lightgrey;
 	display:flex;
 	flex-direction:column;
@@ -265,55 +294,20 @@ td {
 	flex-direction:column;
 }
 
-#repositoryButton {
+#homeButton {
 	width:300px;
 	font-family: 'Press Start 2P', sans-serif;
 	letter-spacing: 0px;
 	font-size:20px;
 	padding: 10px;
 	text-decoration: none;
-	background-color: #ab34eb;
-	color: white;
 	border-radius: 10px;
+	color: white;
 }
 
-#repositoryButton:hover {
-	background-color:#ca84f0;
+#homeButton:hover {
 	cursor: pointer;
-}
-
-#changesButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	text-decoration: none;
-	background-color: red;
-	color: white;
-	border-radius: 10px;
-}
-
-#changesButton:hover {
-	background-color:#ed7b7b;
-	cursor: pointer;
-}
-
-#contactButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	text-decoration: none;
-	background-color: #f08b11;
-	color: white;
-	border-radius: 10px;
-}
-
-#contactButton:hover {
-	background-color: #f2ad5a;
-	cursor:pointer;
+	background-color:
 }
 
 #donateButton {
@@ -330,23 +324,6 @@ td {
 
 #donateButton:hover {
 	background-color:#4166fa;
-	cursor: pointer;
-}
-
-#latestReleasesButton {
-	width:300px;
-	font-family: 'Press Start 2P', sans-serif;
-	letter-spacing: 0px;
-	font-size:20px;
-	padding: 10px;
-	background-color: #06c913;
-	color: white;
-	text-decoration: none;
-	border-radius: 10px;
-}
-
-#latestReleasesButton:hover {
-	background-color:#87d68c;
 	cursor: pointer;
 }
 
@@ -485,11 +462,20 @@ video::-webkit-media-controls-play-button {
 		padding: 5px;
 	}
 
+	#feedbackButton {
+		width:120px;
+		height:50px;
+		font-size:8px;
+		padding: 5px;
+	}
+
 	#backButton {
 		width:200px;
 		font-size:20px;
 		padding: 10px;
 	}
+
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -552,11 +538,19 @@ video::-webkit-media-controls-play-button {
 		padding: 10px;
 	}
 
-	#backButton {
-			width:100px;
-			font-size:20px;
-			padding: 10px;
+	#feedbackButton {
+		width:100px;
+		font-size:8px;
+		padding: 10px;
 	}
+
+	#backButton {
+		width:100px;
+		font-size:20px;
+		padding: 10px;
+	}
+
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -631,6 +625,13 @@ video::-webkit-media-controls-play-button {
 	#roadmapButton {
 		height:40px;
 		width:120px;
+		font-size:7px;
+		padding: 10px;
+	}
+
+	#feedbackButton {
+		width:120px;
+		height:40px;
 		font-size:7px;
 		padding: 10px;
 	}
