@@ -305,9 +305,9 @@ td {
 	color: white;
 }
 
-#homeButton:hover {
+button:hover {
 	cursor: pointer;
-	background-color:
+	filter: brightness(120%); !important;
 }
 
 #donateButton {
@@ -322,11 +322,6 @@ td {
 	border-radius: 10px;
 }
 
-#donateButton:hover {
-	background-color:#4166fa;
-	cursor: pointer;
-}
-
 #roadmapButton {
 	width:300px;
 	font-family: 'Press Start 2P', sans-serif;
@@ -337,11 +332,6 @@ td {
 	background-color: #3699eb;
 	color: white;
 	border-radius: 10px;
-}
-
-#roadmapButton:hover{
-	background-color:#7fc0f5;
-	cursor: pointer;
 }
 
 #backButton {
@@ -356,12 +346,6 @@ td {
 	border-radius: 10px;
 }
 
-#backButton:hover{
-	background-color:lightgreen;
-	cursor: pointer;
-}
-
-
 #greyBackButton {
 	font-family: 'Press Start 2P', sans-serif;
 	letter-spacing: 0px;
@@ -374,11 +358,6 @@ td {
 	width:100px;
 	height:40px;
 	font-size: 15px;
-}
-
-#greyBackButton:hover{
-	background-color: #bad6c2;
-	cursor: pointer;
 }
 
 video::-webkit-media-controls {
@@ -396,7 +375,6 @@ video::-webkit-media-controls-panel {
 video::-webkit-media-controls-play-button {
 	display:none;
 }
-
 
 @media only screen and (max-height: 500px) {
 	body{
@@ -420,49 +398,7 @@ video::-webkit-media-controls-play-button {
 		max-width: 80%;
 	}
 
-	#donateButton {
-		width:120px;
-		height:50px;
-		font-size:8px;
-		padding: 5px;
-	}
-
-	#repositoryButton {
-		width:120px;
-		height:50px;
-		padding: 5px;
-		font-size:8px;
-	}
-
-	#latestReleasesButton {
-		width:120px;
-		height:50px;
-		padding: 5px;
-		font-size:8px;
-	}
-
-	#changesButton {
-		width:120px;
-		height:50px;
-		padding: 5px;
-		font-size:8px;
-	}
-
-	#roadmapButton {
-		height:50px;
-		width:120px;
-		font-size:8px;
-		padding: 5px;
-	}
-
-	#contactButton {
-		width:120px;
-		height:50px;
-		font-size:8px;
-		padding: 5px;
-	}
-
-	#feedbackButton {
+	#homeButton {
 		width:120px;
 		height:50px;
 		font-size:8px;
@@ -474,8 +410,6 @@ video::-webkit-media-controls-play-button {
 		font-size:20px;
 		padding: 10px;
 	}
-
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -507,38 +441,7 @@ video::-webkit-media-controls-play-button {
 		padding: 10px;
 	}
 
-	#repositoryButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-	#latestReleasesButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-	#changesButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-
-	#roadmapButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-	#contactButton {
-		width:100px;
-		font-size:8px;
-		padding: 10px;
-	}
-
-	#feedbackButton {
+	#homeButton {
 		width:100px;
 		font-size:8px;
 		padding: 10px;
@@ -549,8 +452,6 @@ video::-webkit-media-controls-play-button {
 		font-size:20px;
 		padding: 10px;
 	}
-
-
 }
 
 @media only screen and (max-width: 400px) {
@@ -594,44 +495,9 @@ video::-webkit-media-controls-play-button {
 		padding: 10px;
 	}
 
-	#repositoryButton {
+	#homeButton {
 		height:40px;
 		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
-
-	#latestReleasesButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
-
-	#changesButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
-
-	#contactButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
-
-	#roadmapButton {
-		height:40px;
-		width:120px;
-		font-size:7px;
-		padding: 10px;
-	}
-
-	#feedbackButton {
-		width:120px;
-		height:40px;
 		font-size:7px;
 		padding: 10px;
 	}
