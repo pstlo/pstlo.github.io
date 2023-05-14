@@ -21,27 +21,48 @@
 	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
 	<link rel="shortcut icon" href="Assets/Icon.png" type="image/png">
 </head>
+<style>
+	#home {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.5;
+		text-align: center;
+		z-index:2;
+		max-width: 90%;
+		align-items:center;
+	}
+</style>
 <body>
 	<img id="bouncingIcon" src ="Assets/Ship.png"></div>
 	<script src="script.js"></script>
 	<div id="home">
 		<h1><strong>Navigator</strong></h1>
-		<div id= "demoBox">
-			<video width = "200" height = "200" style="border: 1px solid black"controls autoplay loop muted>
+		<div style= "padding-bottom:1%;">
+			<video width = "200" height = "200"controls autoplay loop muted>
 				<source src="Assets/Demo.mp4" type="video/mp4">
 			</video>
 		</div>
 		<p>Navigate between randomly placed tokens like the game "Snake", with the twist of avoiding increasingly unforgiving asteroids- and whatever else may be out there... this is very much a work in progress, and any suggestions or feedback would be welcome  :)</p>
-		<div id = "homeButtons">
+		<nav>
 			<button style= "background-color:#0bba1d;" onclick="location.href='downloads.html'">Latest Releases</button>
 			<button style= "background-color:#7F00FF;" onclick="location.href='changes.html'">Changes</button>
 			<button style= "background-color:#F11A0E;" onclick="window.location.href='https://github.com/pstlo/Navigator'">Repository</button>
-			<button style= "background-color:#1AE2E5;" onclick="window.location.href='contact.html'">Contact</button>
 			<button style= "background-color:#F96E06;" onclick="window.location.href='feedback.html'">Feedback</button>
 			<button style= "background-color:#1F0AF5;" onclick="location.href='support.html'">Support the project</button>
+		</nav>
+		<div id="socialButtons">
+			<button id="socialButton" onclick="window.open('https://www.instagram.com/playnavigator')">
+				<img src="Assets/igIcon.png">
+			</button>
+			<button id="socialButton" onclick="window.open('https://twitter.com/playNavGame')">
+				<img src="Assets/twtIcon.png">
+			</button>
+			<button id="socialButton" onclick="window.location.href='mailto:playNavGame@gmail.com'">
+				<img src="Assets/gmIcon.png">
+			</button>
 		</div>
 		<h3 style="margin-bottom: 0px; font-size:30px;"><span style="font-family: monospace;">&copy;</span>2023 Mike Pistolesi</h3>
-		<p style = "font-size:40%;">This page uses Google analytics</p>
+		<p style = "font-size:45%;">This page uses Google analytics</p>
 	</div>
 
 </body>
