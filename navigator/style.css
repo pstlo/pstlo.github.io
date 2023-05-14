@@ -182,15 +182,15 @@ button:hover {
 	max-width:auto;
 }
 
+#backButton {
+	background-color:#2ED13E;
+}
+
 #bouncingIcon {
 	position: fixed;
 	z-index:1;
 	height:50px;
 	width:50px;
-}
-
-#backButton {
-	background-color:#2ED13E;
 }
 
 ::-webkit-scrollbar {width: 5px;}
