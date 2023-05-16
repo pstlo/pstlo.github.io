@@ -30,7 +30,35 @@
 		z-index:2;
 		max-width: 90%;
 		align-items:center;
-	}
+		}
+		#socialButtons {
+		display:flex;
+		flex-direction:row;
+		padding: 1%;
+		position:relative;
+		max-width:500px;
+		overflow-x:auto;
+		}
+
+	#socialButton {
+		padding:0px;
+		margin-right:10px;
+		margin-left:10px;
+		height:40px;
+		width:auto;
+		position:relative;
+		background:none;
+		border:none;
+		border-radius:40px;
+		}
+
+	#socialButton:hover {background-color:white;}
+
+	#socialButton img {
+		position:relative;
+		height:100%;
+		max-width:auto;
+		}
 </style>
 <body>
 	<img id="bouncingIcon" src ="Assets/Ship.png"></div>
@@ -51,14 +79,17 @@
 			<button style= "background-color:#1F0AF5;" onclick="location.href='support.html'">Support the project</button>
 		</nav>
 		<div id="socialButtons">
+			<button id="socialButton" onclick="window.location.href='mailto:playNavGame@gmail.com'">
+				<img src="Assets/gmIcon.png">
+			</button>
 			<button id="socialButton" onclick="window.open('https://www.instagram.com/playnavigator')">
 				<img src="Assets/igIcon.png">
 			</button>
 			<button id="socialButton" onclick="window.open('https://twitter.com/playNavGame')">
 				<img src="Assets/twtIcon.png">
 			</button>
-			<button id="socialButton" onclick="window.location.href='mailto:playNavGame@gmail.com'">
-				<img src="Assets/gmIcon.png">
+			<button id="socialButton" onclick="window.open('https://tiktok.com/playNav')">
+				<img src="Assets/tokIcon.png">
 			</button>
 		</div>
 		<h3 style="margin-bottom: 0px; font-size:30px;"><span style="font-family: monospace;">&copy;</span>2023 Mike Pistolesi</h3>
