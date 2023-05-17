@@ -14,13 +14,12 @@
 	body {
 		font-family:'Righteous';
 		display:flex;
-		flex-direction:column;
 		background-color:#11041f;
 		background-attachment:fixed;
 		justify-content:center;
 		text-align:center;
-		max-width:40%;
-		margin:auto;
+		font-color:black;
+
 	}
 
 	#content {
@@ -30,19 +29,36 @@
 	}
 
 	h1 {
-		overflow-x:auto;
-		overflow-y:none;
+		overflow-x:hidden;
+		overflow-y:hidden;
 		background-color:#19A7CE;
 		border-radius:10px;
 		font-size:350%;
 		margin:5px;
-		padding:5px;
+		padding:2px;
+		padding-left:15px;
+		padding-right:15px;
+		max-height:70px;
+		max-width:auto;
+	}
+
+	h2 {
+		margin-top:0px;
+		margin-bottom:0;
+		position:relative;
+		background-color:white;
+		border-radius:10px;
+		font-size:100%;
+	}
+
+	h3 {
+		margin-top:0px;
+		font-size:70%;
+		margin-bottom:0px;
 	}
 
 	#connect {
 		position:relative;
-		overflow-x:auto;
-		margin:auto;
 		background-color:#3b353b;
 		margin:5px;
 		padding:5px;
@@ -73,20 +89,157 @@
 		background-color: white;
 		cursor:pointer;
 	}
+
+	#buttonContainer {
+		display:inline;
+		position:relative;
+	}
+
+	#info {
+		display:flex;
+		flex-direction:row;
+		background-color:#3b353b;
+		margin:5px;
+		padding:5px;
+		border-radius:10px;
+	}
+
+	#skills, #other {
+		overflow-y:auto;
+		max-height:200px;
+		margin:auto;
+		margin-top:0;
+		display:flex;
+		flex-direction:column;
+		background-color:lightblue;
+		border-radius:10px;
+		width:48%;
+	}
+
+	#lists {
+		margin-bottom:10px;
+	}
+
+	li {
+		margin-left:10%;
+		margin-top:0;
+		line-height:1.1;
+		text-align:left;
+		font-size:60%;
+	}
+
+	ul {
+		line-height:1;
+		margin-top:0;
+		margin-bottom:0;
+		font-size:80%;
+	}
+
+	::-webkit-scrollbar {width: 5px;}
+
+	::-webkit-scrollbar-thumb {
+	  background-color: #19A7CE;
+	  border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #55b4cf;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #11041f;
+		border-radius: 10px;
+	}
+
+
 </style>
 <body>
 	<div id="content">
 		<h1>Mike Pistolesi</h1>
 		<div id = "connect">
-			<button style="height:34px; width:34px; border-radius:12px;" onclick=window.open('https://www.linkedin.com/in/mikepistolesi')>
-				<img style= "height: 105%; right:1%;" src="Assets/linIcon.png">
-			</button>
+			<h2>Contact</h2>
+			<div id="buttonContainer" style = "top:5px;">
+				<button title="Connect on Linkedin" style="height:34px; width:34px; border-radius:12px;" onclick=window.open('https://www.linkedin.com/in/mikepistolesi')>
+					<img style= "height: 105%; right:1%;" src="Assets/linIcon.png">
+				</button>
+			</div>
+			<div id="buttonContainer" style = "top: 7px;">
+				<button title="Github" style="height:34px; width:34px; border-radius:25px;" onclick=window.open('https://github.com/pstlo')>
+					<img style= "height: 110%; right:5%; bottom:5%;" src="Assets/ghIcon.png">
+				</button>
+			</div>
 		</div>
 		<div id = "projects">
-			<div style = "position:relative; top:10px;">
-				<button style="height: 60px; width: 60px; border-radius:100px;" onclick="window.location.href='navigator/home.html'">
+			<h2>Projects</h2>
+			<div style = "position:relative; top:15px;">
+				<button title="Play Navigator" style="height: 60px; width: 60px; border-radius:100px;" onclick="window.location.href='navigator/home.html'">
 					<img style = "bottom:10px;height:140%; right: 12px;;" src="Assets/navIcon.png">
 				</button>
+			</div>
+		</div>
+		<div id = "info">
+			<div id = "skills">
+				<h2>Skills</h2>
+				<div id="lists">
+					<h3>Programming</h3>
+					<li>Python</li>
+					<ul>
+						<li>2 and 3</li>
+					</ul>
+					<li>Java</li>
+					<li>C</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Some JavaScript</li>
+				</div>
+				<div id="lists">
+					<h3>Software</h3>
+					<li>Microsoft Office</li>
+					<ul>
+						<li>Word</li>
+						<li>Excel</li>
+						<li>Powerpoint</li>
+						<li>Publisher</li>
+					</ul>
+					<li>OBS</li>
+					<li>IDE's</li>
+					<ul>
+						<li>VS Code</li>
+						<li>Sublime Text</li>
+						<li>Notepad++</li>
+						<li>Nano</li>
+					<ul>
+				</div>
+				<div id = "lists">
+					<h3>Operating Systems</h3>
+					<li>Windows</li>
+					<li>MacOS</li>
+					<li>Linux</li>
+					<ul>
+						<li>Ubuntu</li>
+						<li>Kali</li>
+					</ul>
+					<li>Android</li>
+					<li>iOS</li>
+				</div>
+				<div id = "lists">
+					<h3>Hardware</h3>
+					<li>Computer assembly</li>
+					<li>Microcontrollers</li>
+					<li>Raspberry Pi</li>
+				</div>
+			</div>
+			<div id="other">
+				<h2>Education</h2>
+				<h3>University, 3rd year</h3>
+				<li>Studying computer science</li>
+				<ul>
+					<li>Discrete Mathematics</li>
+					<li>Algorithms</li>
+					<li>data structures</li>
+					<li>Computer organization</li>
+					<li>Assembly language</li>
+				</ul>
 			</div>
 		</div>
 	</div>
