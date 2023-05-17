@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4WSX0D7S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-5M4WSX0D7S');
-	</script>
-	<meta http-equiv="refresh" content="0; URL=./navigator/home.html">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="My page">
+	<meta name="author" content="Mike Pistolesi">
+	<title>Mike</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
+<style>
+	body {
+		font-family:'Righteous';
+		display:flex;
+		flex-direction:column;
+		background-color:#11041f;
+		background-attachment:fixed;
+		justify-content:center;
+		text-align:center;
+		max-width:50%;
+		margin:auto;
+	}
+
+	#content {
+		border: solid black 1px;
+		border-radius:10px;
+		background-color: black;
+	}
+
+	h1 {
+		overflow-x:auto;
+		background-color:#19A7CE;
+		border-radius:10px;
+		font-size:60px;
+		margin:5px;
+		padding:5px;
+	}
+
+	#connect {
+		position:relative;
+		overflow-x:auto;
+		margin:auto;
+		background-color:#3b353b;
+		margin:5px;
+		padding:5px;
+		border-radius:10px;
+	}
+
+	#projects {
+		margin:5px;
+		padding:5px;
+		border-radius:10px;
+		background-color: #3b353b;
+	}
+
+	button {
+		padding:0px;
+		margin-right:10px;
+		margin-left:10px;
+		position:relative;
+		background:none;
+		border:hidden;
+	}
+
+	button img {
+		position: relative;
+		height: 105%;
+		right:1%
+	}
+
+	button:hover {
+		background-color: white;
+		cursor:pointer;
+	}
+
+</style>
+<body>
+	<div id="content">
+		<h1>Mike Pistolesi</h1>
+		<div id = "connect">
+			<button style="height:34px; width:34px;border-radius:12px;" onclick=window.open('https://www.linkedin.com/in/mikepistolesi')">
+				<img src="Assets/linIcon.png">
+			</button>
+		</div>
+		<div id = "projects">
+			<button style="border-radius:12px;" onclick="window.location.href='navigator/home.html'">
+				<img src="Assets/navIcon.png">
+			</button>
+		</div>
+	</div>
+</body>
 </html>
