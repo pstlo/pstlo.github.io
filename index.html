@@ -19,7 +19,7 @@
 		background-attachment:fixed;
 		justify-content:center;
 		text-align:center;
-		max-width:50%;
+		max-width:40%;
 		margin:auto;
 	}
 
@@ -31,9 +31,10 @@
 
 	h1 {
 		overflow-x:auto;
+		overflow-y:none;
 		background-color:#19A7CE;
 		border-radius:10px;
-		font-size:60px;
+		font-size:350%;
 		margin:5px;
 		padding:5px;
 	}
@@ -56,38 +57,37 @@
 	}
 
 	button {
+		position:relative;
 		padding:0px;
 		margin-right:10px;
 		margin-left:10px;
-		position:relative;
 		background:none;
 		border:hidden;
 	}
 
 	button img {
 		position: relative;
-		height: 105%;
-		right:1%
 	}
 
 	button:hover {
 		background-color: white;
 		cursor:pointer;
 	}
-
 </style>
 <body>
 	<div id="content">
 		<h1>Mike Pistolesi</h1>
 		<div id = "connect">
-			<button style="height:34px; width:34px;border-radius:12px;" onclick=window.open('https://www.linkedin.com/in/mikepistolesi')">
-				<img src="Assets/linIcon.png">
+			<button style="height:34px; width:34px; border-radius:12px;" onclick=window.open('https://www.linkedin.com/in/mikepistolesi')>
+				<img style= "height: 105%; right:1%;" src="Assets/linIcon.png">
 			</button>
 		</div>
 		<div id = "projects">
-			<button style="border-radius:12px;" onclick="window.location.href='navigator/home.html'">
-				<img src="Assets/navIcon.png">
-			</button>
+			<div style = "position:relative; top:10px;">
+				<button style="height: 60px; width: 60px; border-radius:100px;" onclick="window.location.href='navigator/home.html'">
+					<img style = "bottom:10px;height:140%; right: 12px;;" src="Assets/navIcon.png">
+				</button>
+			</div>
 		</div>
 	</div>
 </body>
