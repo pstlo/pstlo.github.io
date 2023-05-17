@@ -47,6 +47,7 @@
 		background-color:white;
 		border-radius:10px;
 		font-size:100%;
+		z-index:2;
 	}
 
 	h3 {
@@ -100,6 +101,7 @@
 		margin:5px;
 		padding:5px;
 		border-radius:10px;
+		position:relative;
 	}
 
 	#skills, #other {
@@ -116,6 +118,7 @@
 
 	#lists {
 		margin-bottom:10px;
+		z-index:1;
 	}
 
 	li {
@@ -148,6 +151,13 @@
 		background-color: #11041f;
 		border-radius: 10px;
 	}
+
+	@media only screen and (max-width: 800px) {
+		body {
+			font-size:80%;
+		}
+	}
+
 </style>
 <body>
 	<div id="content">
@@ -168,14 +178,14 @@
 		<div id = "projects">
 			<h2>Projects</h2>
 			<div style = "position:relative; top:15px;">
-				<button title="Play Navigator" style="height: 60px; width: 60px; border-radius:100px;" onclick="window.location.href='navigator/home.html'">
+				<button title="Play Navigator" style="height: 80px; width:80px; border-radius:100px;" onclick="window.location.href='navigator/home.html'">
 					<img style = "bottom:10px;height:140%; right: 12px;;" src="Assets/navIcon.png">
 				</button>
 			</div>
 		</div>
 		<div id = "info">
 			<div id = "skills">
-				<h2>Skills</h2>
+				<h2 style="top:0; position:sticky">Skills</h2>
 				<div id="lists">
 					<h3>Programming</h3>
 					<li>Python</li>
@@ -226,7 +236,7 @@
 				</div>
 			</div>
 			<div id="other">
-				<h2>Education</h2>
+				<h2 style="top:0; position:sticky">Education</h2>
 				<h3>University, 3rd year</h3>
 				<li>Studying computer science</li>
 				<ul>
