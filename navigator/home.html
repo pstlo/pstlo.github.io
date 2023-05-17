@@ -62,6 +62,21 @@
 		height:100%;
 		max-width:auto;
 		}
+		
+	#home a {
+		text-decoration: none;
+		border-bottom: none;
+		color: #07e821;
+	
+		
+	}
+
+	#home a:hover {
+		color: #07b8e0;
+		text-decoration: none;
+		border-bottom: none;
+	}
+	
 </style>
 <body>
 	<img id="bouncingIcon" src ="Assets/Ship.png"></div>
@@ -77,25 +92,28 @@
 		<nav>
 			<button style= "background-color:#0bba1d;" onclick="location.href='downloads.html'">Latest Releases</button>
 			<button style= "background-color:#7F00FF;" onclick="location.href='changes.html'">Changes</button>
-			<button style= "background-color:#F11A0E;" onclick="window.location.href='https://github.com/pstlo/Navigator'">Repository</button>
+			<button title="https://github.com/pstlo/Navigator" style= "background-color:#F11A0E;" onclick="window.location.href='https://github.com/pstlo/Navigator'">Repository</button>
 			<button style= "background-color:#F96E06;" onclick="window.location.href='feedback.html'">Feedback</button>
 			<button style= "background-color:#1F0AF5;" onclick="location.href='support.html'">Support the project</button>
 		</nav>
 		<div id="socialButtons">
-			<button id="socialButton" onclick="window.location.href='mailto:playNavGame@gmail.com'">
+			<button id="socialButton" title="playNavGame@gmail.com" onclick="window.location.href='mailto:playNavGame@gmail.com'">
 				<img src="Assets/gmIcon.png">
 			</button>
-			<button id="socialButton" onclick="window.open('https://www.instagram.com/playnavigator')">
+			<button id="socialButton" title="@playNavigator" onclick="window.open('https://www.instagram.com/playnavigator')">
 				<img src="Assets/igIcon.png">
 			</button>
-			<button id="socialButton" onclick="window.open('https://twitter.com/playNavGame')">
+			<button id="socialButton" title="@playNavGame" onclick="window.open('https://twitter.com/playNavGame')">
 				<img src="Assets/twtIcon.png">
 			</button>
-			<button id="socialButton" onclick="window.open('https://tiktok.com/@playNav')">
+			<button id="socialButton" title="@playNav" onclick="window.open('https://tiktok.com/@playNav')">
 				<img src="Assets/tokIcon.png">
 			</button>
 		</div>
-		<h3 style="margin-bottom: 0px; font-size:30px;"><span style="font-family: monospace;">&copy;</span>2023 Mike Pistolesi</h3>
+		<h3 style="margin-bottom: 0px; font-size: 30px;">
+			<span style="font-family: monospace;">&copy;</span>2023 <a href="../index.html">Mike Pistolesi</a>
+		</h3>
+
 		<p style = "font-size:45%;">This page uses Google analytics</p>
 	</div>
 
