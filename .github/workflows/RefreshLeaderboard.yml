@@ -24,12 +24,12 @@ jobs:
         pip install python-dotenv
         pip install dnspython
         pip install certifi
-        python -m pip install pymongo=3.11
+        python -m pip install pymongo==3.11
         echo "${{ secrets.ENV }}" > "${{ github.workspace }}/Assets/.env"
 
     - name: Run script and commit changes
       run: |
         python GetLeaderboard.py  
-        git add /navigator/assets/Leaders.json
+        git add /navigator/Assets/Leaders.json
         git commit -m "Refresh Leaders.json"
         git push
