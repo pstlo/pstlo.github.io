@@ -1,0 +1,35 @@
+name: Refresh Leaderboard
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  commit_leaders:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install python-dotenv
+        pip install dnspython
+        pip install certifi
+        python -m pip install pymongo=3.11
+        echo "${{ secrets.ENV }}" > "${{ github.workspace }}/Assets/.env"
+
+    - name: Run script and commit changes
+      run: |
+        python GetLeaderboard.py  
+        git add /navigator/assets/Leaders.json
+        git commit -m "Refresh Leaders.json"
+        git push
