@@ -6,7 +6,7 @@ on:
       - main 
 
 jobs:
-  commit_leaders:
+  update-leaderboard:
     runs-on: ubuntu-latest
 
     steps:
