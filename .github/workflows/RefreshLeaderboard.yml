@@ -39,6 +39,7 @@ jobs:
         python navigator/GetLeaderboard.py
         git config --global user.name "pstlo"
         git config --global user.email "mikey.pistolesi1@gmail.com"
-        git add Leaders.json
+        mv Leaders.json navigator
+        git add navigator/Leaders.json
         git commit -m "Refresh Leaders.json"
         git push
