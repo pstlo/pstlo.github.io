@@ -14,7 +14,6 @@
 	<meta name="author" content="Mike Pistolesi">
 	<meta name="description" content="Navigator Leaderboard">
 	<title>Navigator Leaderboard</title>
-    <script src="leaders.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -36,6 +35,7 @@
   <table id="leaderboard-table">
     <thead>
       <tr>
+		<th>#</th>
         <th>Name</th>
         <th>Time</th>
         <th>Score</th>
@@ -59,10 +59,11 @@
 
 		leaderboardData.forEach(function(player) {
 			var row = leaderboardTable.insertRow();
+			var numberCell = row.insertCell();
 			var nameCell = row.insertCell();
 			var timeCell = row.insertCell();
 			var scoreCell = row.insertCell();
-
+			numberCell.textContent = index + 1;
 			nameCell.textContent = player.name;
 			timeCell.textContent = player.time;
 			scoreCell.textContent = player.score;
