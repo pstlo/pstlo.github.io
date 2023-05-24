@@ -1,9 +1,8 @@
 name: Refresh Leaderboard
 
 on:
-  push:
-    branches:
-      - main 
+  schedule:
+    - cron: "*/5 * * * *"
       
 env:
   DBKEY: ${{ secrets.DBKEY }}
