@@ -1,6 +1,5 @@
 import os,sys,json,base64,certifi
 from cryptography.fernet import Fernet
-from dotenv import load_dotenv
 from pymongo.mongo_client import MongoClient
 
 database = MongoClient((Fernet(base64.b64decode(os.getenv('DBKEY'))).decrypt(os.getenv('DBTOKEN'))).decode(),tlsCAFile=certifi.where())
@@ -14,3 +13,4 @@ for leaderIndex in range(len(leaders)-1):
     leaderBoard.append( {'name':leader['name'], 'time':leader['longestRun'], 'score':leader['highScore']} )
 
 with open ("Leaders.json","w") as file: file.write(json.dumps(leaderBoard))
+print os.listdir(os.getcwd())
