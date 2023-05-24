@@ -37,47 +37,47 @@
 	#leaders::-webkit-scrollbar-thumb:hover {background-color: #7145f5;}
 </style>
 <body>
-  <h1>Leaderboard</h1>
-  <div id = "leaders">
-	  <table id="leaderboard-table">
-		<thead>
-		  <tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>Time</th>
-			<th>Score</th>
-		  </tr>
-		</thead>
-		<tbody id="leaderboard-body">
-		</tbody>
-	  </table>
-	  <script>
-		fetch('Leaders.json')
-		  .then(response => response.json())
-		  .then(data => {
-			generateLeaderboard(data);
-		  })
-		  .catch(error => {
-			console.log('Could not get leaderboard', error);
-		  });
+	<h1>Leaderboard</h1>
+	<div id = "leaders">
+		<table id="leaderboard-table">
+			<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Time</th>
+				<th>Score</th>
+			</tr>
+			</thead>
+			<tbody id="leaderboard-body">
+			</tbody>
+		  </table>
+		  <script>
+			fetch('Leaders.json')
+			  .then(response => response.json())
+			  .then(data => {
+				generateLeaderboard(data);
+			  })
+			  .catch(error => {
+				console.log('Could not get leaderboard', error);
+			  });
 
-		function generateLeaderboard(leaderboardData) {
-		  var leaderboardTable = document.getElementById("leaderboard-body");
+			function generateLeaderboard(leaderboardData) {
+			  var leaderboardTable = document.getElementById("leaderboard-body");
 
-		  leaderboardData.forEach(function(player, index) { // Add 'index' parameter
-			var row = leaderboardTable.insertRow();
-			var numberCell = row.insertCell();
-			var nameCell = row.insertCell();
-			var timeCell = row.insertCell();
-			var scoreCell = row.insertCell();
-			numberCell.textContent = index + 1;
-			nameCell.textContent = player.name;
-			timeCell.textContent = player.time;
-			scoreCell.textContent = player.score;
-		  });
-		}
-	  </script>
-	  <button id = "backButton" style='margin-top:10px' onclick="location.href='home.html'">Back</button>
+			  leaderboardData.forEach(function(player, index) { // Add 'index' parameter
+				var row = leaderboardTable.insertRow();
+				var numberCell = row.insertCell();
+				var nameCell = row.insertCell();
+				var timeCell = row.insertCell();
+				var scoreCell = row.insertCell();
+				numberCell.textContent = index + 1;
+				nameCell.textContent = player.name;
+				timeCell.textContent = player.time;
+				scoreCell.textContent = player.score;
+			  });
+			}
+		</script>
 	</div>
+	<button id = "backButton" style='margin-top:10px' onclick="location.href='home.html'">Back</button>
 </body>
 </html>
