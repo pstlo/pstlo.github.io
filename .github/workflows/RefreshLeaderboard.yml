@@ -36,7 +36,9 @@ jobs:
 
     - name: Run script and commit changes
       run: |        
-        python navigator/GetLeaderboard.py  
-        git add pstlo.github.io/navigator/Leaders.json
+        python navigator/GetLeaderboard.py 
+        ls
+        pwd
+        git add Leaders.json
         git commit -m "Refresh Leaders.json"
         git push
