@@ -26,11 +26,11 @@ jobs:
         pip install certifi
         pip install cryptography
         python -m pip install pymongo==3.11
-        echo "${{ secrets.ENV }}" > "navigator/.env"
-        ls
+
 
     - name: Run script and commit changes
-      run: |
+      run: |        
+        echo "${{ secrets.ENV }}" > "navigator/.env"
         python navigator/GetLeaderboard.py  
         git add /navigator/Assets/Leaders.json
         git commit -m "Refresh Leaders.json"
