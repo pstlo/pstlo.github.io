@@ -14,8 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Download repository
       uses: actions/checkout@v3
+      with:
+        repository: pstlo/pstlo.github.io
+        ref: main
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -31,10 +34,9 @@ jobs:
         pip install cryptography
         python -m pip install pymongo==3.11
 
-
     - name: Run script and commit changes
       run: |        
         python navigator/GetLeaderboard.py  
-        git add ${{github.workspace}}/navigator/Leaders.json
+        git add navigator/Leaders.json
         git commit -m "Refresh Leaders.json"
         git push
