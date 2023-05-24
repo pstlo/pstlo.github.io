@@ -34,7 +34,7 @@ jobs:
 
     - name: Run script and commit changes
       run: |        
-        python navigator/GetLeaderboard.py  
-        git add navigator/Leaders.json
+        python ${{github.workspace}}/navigator/GetLeaderboard.py  
+        git add ${{github.workspace}}/navigator/Leaders.json
         git commit -m "Refresh Leaders.json"
         git push
