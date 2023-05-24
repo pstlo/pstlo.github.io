@@ -21,13 +21,28 @@
 	<link rel="shortcut icon" href="Assets/Icon.png" type="image/png">
 </head>
 <style>
+	body{
+		max-width:700px;
+	}
+	
 	table {
-		border-collapse: collapse;
+      border-collapse: collapse;
+      width: 100%;
     }
 
     th, td {
-		border: 1px solid black;
-		padding: 8px;
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+    }
+
+    #leaderboard-body {
+      max-height: 200px;
+      overflow-y: auto;
     }
 </style>
 <body>
