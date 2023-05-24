@@ -35,7 +35,7 @@
   <table id="leaderboard-table">
     <thead>
       <tr>
-		<th>#</th>
+        <th>#</th>
         <th>Name</th>
         <th>Time</th>
         <th>Score</th>
@@ -46,28 +46,28 @@
   </table>
   <script>
     fetch('Leaders.json')
-		.then(response => response.json())
-		.then(data => {
-		generateLeaderboard(data);
-		})
-		.catch(error => {
-		console.log('Could not get leaderboard', error);
-		});
+      .then(response => response.json())
+      .then(data => {
+        generateLeaderboard(data);
+      })
+      .catch(error => {
+        console.log('Could not get leaderboard', error);
+      });
 
-	function generateLeaderboard(leaderboardData) {
-		var leaderboardTable = document.getElementById("leaderboard-body");
+    function generateLeaderboard(leaderboardData) {
+      var leaderboardTable = document.getElementById("leaderboard-body");
 
-		leaderboardData.forEach(function(player) {
-			var row = leaderboardTable.insertRow();
-			var numberCell = row.insertCell();
-			var nameCell = row.insertCell();
-			var timeCell = row.insertCell();
-			var scoreCell = row.insertCell();
-			numberCell.textContent = index + 1;
-			nameCell.textContent = player.name;
-			timeCell.textContent = player.time;
-			scoreCell.textContent = player.score;
-		});
+      leaderboardData.forEach(function(player, index) { // Add 'index' parameter
+        var row = leaderboardTable.insertRow();
+        var numberCell = row.insertCell();
+        var nameCell = row.insertCell();
+        var timeCell = row.insertCell();
+        var scoreCell = row.insertCell();
+        numberCell.textContent = index + 1;
+        nameCell.textContent = player.name;
+        timeCell.textContent = player.time;
+        scoreCell.textContent = player.score;
+      });
     }
   </script>
 </body>
