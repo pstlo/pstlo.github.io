@@ -13,5 +13,3 @@ for leaderIndex in range(len(leaders)-1):
     leaderBoard.append( {'name':leader['name'], 'time':leader['longestRun'], 'score':leader['highScore']} )
 
 with open ("Leaders.json","w") as file: file.write(json.dumps(leaderBoard))
-print(os.listdir(os.getcwd()))
-print(os.getcwd())
