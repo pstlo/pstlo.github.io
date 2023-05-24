@@ -42,4 +42,4 @@ jobs:
         mv Leaders.json navigator
         git add navigator/Leaders.json
         git commit -m "Refresh Leaders.json"
-        git push
+        git push origin main
