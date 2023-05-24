@@ -14,3 +14,4 @@ for leaderIndex in range(len(leaders)-1):
 
 with open ("Leaders.json","w") as file: file.write(json.dumps(leaderBoard))
 print(os.listdir(os.getcwd()))
+print(os.getcwd())
