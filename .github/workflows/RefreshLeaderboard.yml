@@ -27,6 +27,7 @@ jobs:
         pip install cryptography
         python -m pip install pymongo==3.11
         echo "${{ secrets.ENV }}" > "navigator/.env"
+        ls
 
     - name: Run script and commit changes
       run: |
