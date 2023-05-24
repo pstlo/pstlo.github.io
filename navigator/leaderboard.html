@@ -21,16 +21,6 @@
 	<link rel="shortcut icon" href="Assets/Icon.png" type="image/png">
 </head>
 <style>
-
-	#leaderboard {
-		z-index:2;
-		height:800px;
-		display: flex;
-		flex-direction: column;
-		align-items:center;
-		text-align:center;
-	}
-
 	#leaders {
 		height: 500px;
 		overflow-y: auto;
@@ -39,56 +29,55 @@
 		position:relative;
 	}
 
-	#leaders td {text-align:left;}
-
 	#leaders::-webkit-scrollbar-thumb {
 	  background-color: #541df5;
 	  border-radius: 10px;
 	}
 
 	#leaders::-webkit-scrollbar-thumb:hover {background-color: #7145f5;}
-
 </style>
 <body>
   <h1>Leaderboard</h1>
-  <table id="leaderboard-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Time</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody id="leaderboard-body">
-    </tbody>
-  </table>
-  <script>
-    fetch('Leaders.json')
-      .then(response => response.json())
-      .then(data => {
-        generateLeaderboard(data);
-      })
-      .catch(error => {
-        console.log('Could not get leaderboard', error);
-      });
+  <div id = "leaders">
+	  <table id="leaderboard-table">
+		<thead>
+		  <tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Time</th>
+			<th>Score</th>
+		  </tr>
+		</thead>
+		<tbody id="leaderboard-body">
+		</tbody>
+	  </table>
+	  <script>
+		fetch('Leaders.json')
+		  .then(response => response.json())
+		  .then(data => {
+			generateLeaderboard(data);
+		  })
+		  .catch(error => {
+			console.log('Could not get leaderboard', error);
+		  });
 
-    function generateLeaderboard(leaderboardData) {
-      var leaderboardTable = document.getElementById("leaderboard-body");
+		function generateLeaderboard(leaderboardData) {
+		  var leaderboardTable = document.getElementById("leaderboard-body");
 
-      leaderboardData.forEach(function(player, index) { // Add 'index' parameter
-        var row = leaderboardTable.insertRow();
-        var numberCell = row.insertCell();
-        var nameCell = row.insertCell();
-        var timeCell = row.insertCell();
-        var scoreCell = row.insertCell();
-        numberCell.textContent = index + 1;
-        nameCell.textContent = player.name;
-        timeCell.textContent = player.time;
-        scoreCell.textContent = player.score;
-      });
-    }
-  </script>
+		  leaderboardData.forEach(function(player, index) { // Add 'index' parameter
+			var row = leaderboardTable.insertRow();
+			var numberCell = row.insertCell();
+			var nameCell = row.insertCell();
+			var timeCell = row.insertCell();
+			var scoreCell = row.insertCell();
+			numberCell.textContent = index + 1;
+			nameCell.textContent = player.name;
+			timeCell.textContent = player.time;
+			scoreCell.textContent = player.score;
+		  });
+		}
+	  </script>
+	</div>
 <button id = "backButton" style='margin-top:10px' onclick="location.href='home.html'">Back</button>
 </body>
 </html>
