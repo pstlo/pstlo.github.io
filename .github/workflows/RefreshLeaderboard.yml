@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main 
+      
+env:
+  DBKEY: ${{ secrets.DBKEY }}
+  DBTOKEN: ${{ secrets.DBTOKEN }}
 
 jobs:
   update-leaderboard:
@@ -30,7 +34,6 @@ jobs:
 
     - name: Run script and commit changes
       run: |        
-        echo "${{ secrets.ENV }}" > "navigator/.env"
         python navigator/GetLeaderboard.py  
         git add /navigator/Assets/Leaders.json
         git commit -m "Refresh Leaders.json"
