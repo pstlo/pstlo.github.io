@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4WSX0D7S"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-5M4WSX0D7S');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="Mike Pistolesi">
+	<meta name="description" content="Navigator Leaderboard">
+	<title>Navigator Leaderboard</title>
+    <script src="leaders.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+	<link rel="shortcut icon" href="Assets/Icon.png" type="image/png">
+</head>
+<style>
+	table {
+		border-collapse: collapse;
+    }
+
+    th, td {
+		border: 1px solid black;
+		padding: 8px;
+    }
+</style>
+<body>
+  <h1>Leaderboard</h1>
+  <table id="leaderboard-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-body">
+    </tbody>
+  </table>
+  <script>
+    fetch('Leaders.json')
+		.then(response => response.json())
+		.then(data => {
+		generateLeaderboard(data);
+		})
+		.catch(error => {
+		console.log('Could not get leaderboard', error);
+		});
+
+	function generateLeaderboard(leaderboardData) {
+		var leaderboardTable = document.getElementById("leaderboard-body");
+
+		leaderboardData.forEach(function(player) {
+			var row = leaderboardTable.insertRow();
+			var nameCell = row.insertCell();
+			var timeCell = row.insertCell();
+			var scoreCell = row.insertCell();
+
+			nameCell.textContent = player.name;
+			timeCell.textContent = player.time;
+			scoreCell.textContent = player.score;
+		});
+    }
+  </script>
+</body>
+</html>
