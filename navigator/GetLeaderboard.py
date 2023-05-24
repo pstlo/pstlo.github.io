@@ -3,8 +3,6 @@ from cryptography.fernet import Fernet
 from dotenv import load_dotenv
 from pymongo.mongo_client import MongoClient
 
-load_dotenv(os.path.join(os.getcwd(),'.env'))
-
 database = MongoClient((Fernet(base64.b64decode(os.getenv('DBKEY'))).decrypt(os.getenv('DBTOKEN'))).decode(),tlsCAFile=certifi.where())
 collection = database["navigator"]["leaderboard"]
 
