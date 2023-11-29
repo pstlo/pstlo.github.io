@@ -61,6 +61,17 @@ h4 {
 	color:white;
 }
 
+
+h5 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: 'VT323', monospace;
+	font-size: 30px;
+	color:white;
+	line-height: 1;
+}
+
+
 p {
 	font-family: 'Press Start 2P', sans-serif;
 	max-width:70%;
